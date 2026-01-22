@@ -13,8 +13,10 @@ import user from "./images/user.jpeg";
 import footerlogo from "./images/footerlogo.png";
 import "leaflet/dist/leaflet.css";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { useState } from "react";
 
 const App = () => {
+  const [isOpen, setisOpen] = useState(false);
   return (
     <>
       {/* Page 1 */}
@@ -67,8 +69,35 @@ const App = () => {
               <i className="ri-phone-fill"></i>ContactUs
             </span>
           </button>
+
+         <div className="nav-burger">
+  <h4
+    className="menu-btn"
+    onClick={() => setisOpen(prev => !prev)}
+  >
+    <i className="ri-menu-line"></i>
+  </h4>
+
+  {isOpen && (
+    <div className="icons">
+      <p>Home</p>
+      <p>AboutUs</p>
+      <p>StoriesChange</p>
+      <p>Volunteers</p>
+
+    </div>
+  )}
+</div>
         </div>
       </div>
+     <div className={`contact ${isOpen ? "contact-shift" : ""}`}>
+  <button>
+    <span>
+      <i className="ri-phone-fill"></i>ContactUs
+    </span>
+  </button>
+</div>
+
       {/* container */}
       <div className="container">
         <div className="card">
@@ -404,7 +433,7 @@ const App = () => {
             <span>//</span>SUBSCRIBE <span>//</span>
           </h4>
           <h2>
-            New Things Will <br /> Always Update <br /> Regularly
+            New Things Will <br className="break" /> Always Update <br className="break" /> Regularly
           </h2>
           <div className="email-box">
             <i class="ri-mail-fill"></i>{" "}
@@ -418,6 +447,7 @@ const App = () => {
       </div>
       {/* footer */}
       <div className="footer">
+        <div className="footer-wrapper">
         <div className="footer1">
           <img src={footerlogo} alt="" />
           <p>
@@ -427,13 +457,15 @@ const App = () => {
           </p>
         </div>
         <div className="footer2">
-          <div className="links-head">Explore</div>
+        <div className="explore">
+            <div className="links-head">Explore</div>
           <div className="links">
             <a href="#">Home</a>
             <a href="#founder">Founder Stories</a>
             <a href="#about">About</a>
             <a href="#media">Media &Updates</a>
           </div>
+        </div>
         </div>
         <div className="footer3">
           <div className="links-head">Links</div>
@@ -448,14 +480,16 @@ const App = () => {
           <div className="links-head">Contact</div>
           <div className="links">
             <h4>
-            40/1,NS Road , Rishra, <br />
-            Hooghly
-          </h4>
-          <h4>support@support.com</h4>
-          <h4>+91 9876543210</h4>
+              40/1,NS Road , Rishra, <br />
+              Hooghly
+            </h4>
+            <h4>support@support.com</h4>
+            <h4>+91 9876543210</h4>
           </div>
         </div>
+        </div>
       </div>
+
     </>
   );
 };
