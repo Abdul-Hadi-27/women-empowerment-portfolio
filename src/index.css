@@ -1477,7 +1477,9 @@ width: 100%;
   align-items: center; /* 👈 sab center */
   gap: 1rem;
 }
-
+.footer4{
+  display: none;
+}
   .footer-wrapper{
     height: auto;
     width: 100%;
