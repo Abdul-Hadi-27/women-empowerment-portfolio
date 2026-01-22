@@ -468,6 +468,7 @@ const App = () => {
         </div>
         </div>
         <div className="footer3">
+           <div className="explore">
           <div className="links-head">Links</div>
           <div className="links">
             <a href="#donations">Donations</a>
@@ -475,8 +476,10 @@ const App = () => {
             <a href="#privacy">Privacy Policy</a>
             <a href="#terms">Terms &Conditions</a>
           </div>
+          </div>
         </div>
         <div className="footer4">
+            <div className="explore">
           <div className="links-head">Contact</div>
           <div className="links">
             <h4>
@@ -485,6 +488,7 @@ const App = () => {
             </h4>
             <h4>support@support.com</h4>
             <h4>+91 9876543210</h4>
+          </div>
           </div>
         </div>
         </div>
