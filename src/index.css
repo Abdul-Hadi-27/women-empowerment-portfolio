@@ -821,7 +821,7 @@ small {
   }
   .cardContainer {
     position: absolute;
-    top: 2.5rem;
+    top: 2rem;
     /* font-weight: ; */
     left: 10px;
     color: white;
